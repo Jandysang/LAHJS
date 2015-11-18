@@ -231,7 +231,7 @@
 						addBalls(MARGIN_LEFT+39*(RADIUS+1),MARGIN_TOP,parseInt(RS[1]/10));
 					}
 					if(parseInt(nextRS[1]%10)!=parseInt(RS[1]%10)){
-						addBalls(MARGIN_LEFT+54*(RADIUS+1),MARGIN_TOP,parseInt(RS[1]%100));
+						addBalls(MARGIN_LEFT+54*(RADIUS+1),MARGIN_TOP,parseInt(RS[1]%10));
 					}
 					if(parseInt(nextRS[2]/10)!=parseInt(RS[2]/10)){
 						addBalls(MARGIN_LEFT+78*(RADIUS+1),MARGIN_TOP,parseInt(RS[2]/10));
@@ -242,7 +242,7 @@
 					RS=nextRS;
 				}
 				updateBalls();
-				console.log(balls.length);
+				//console.log(balls.length);
 			}
 			function addBalls(x,y,num){
 				for(var i=0,len=digit[num].length;i<len;i++){
@@ -269,7 +269,7 @@
 					balls[i].vy+=balls[i].g;
 					if(balls[i].y>=WINDDOW_HEIGHT-RADIUS){
 						balls[i].y=WINDDOW_HEIGHT-RADIUS;
-						balls[i].vy= -balls[i].vy*0.2;
+						balls[i].vy= -balls[i].vy*0.75;
 					}
 				}
 				var c=0;
@@ -279,8 +279,8 @@
 					}
 				}
 				
-				balls=balls.slice(0,c);
-				if(balls.length>100) balls=balls.slice(balls.length-101);
+				balls=balls.slice(0,c+1);
+				//if(balls.length>300) balls=balls.slice(balls.length-300);
 			}
 	</script>
 </body>
