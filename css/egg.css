@@ -1,0 +1,13 @@
+#imgPart1,
+#imgPart2,
+#imgPart3,
+#imgPart4,
+#imgPart5,
+#imgPart6 {
+  display: none;
+}
+#eggCanvas{
+	border: 5px solid #ddd;
+	margin: 30px auto;
+	display: inherit;
+}
