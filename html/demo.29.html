@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例29</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		window.onload=function(){
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			canvas.width=800;
+			canvas.height=800;
+
+
+			context.beginPath();
+			context.moveTo(150,150); //x0,y0
+			context.arcTo(650,150,650,650,300); //x1,y1,x2,y2,randius
+
+			context.lineWidth=6;
+			context.strokeStyle="red";
+			context.stroke();
+
+			context.beginPath();
+			context.moveTo(150,150);
+			context.lineTo(650,150);
+			context.lineTo(650,650);
+
+			context.lineWidth=2;
+			context.strokeStyle="gray";
+			context.stroke();
+		}
+
+		
+	</script>
+</body>
+</html>

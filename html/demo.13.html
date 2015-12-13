@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例13</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		canvas.width=800;
+		canvas.height=800;
+		
+		context.lineWidth=10;
+		context.strokeStyle="#058";
+
+		context.beginPath();
+		context.moveTo(100,200);
+		context.lineTo(700,200);
+		context.lineCap="butt";//default
+		//context.closePath();
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(100,400);
+		context.lineTo(700,400);
+		context.lineCap="round";
+		//context.closePath();
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(100,600);
+		context.lineTo(700,600);
+		context.lineCap="square";
+		//context.closePath();
+		context.stroke();
+
+
+		//用作参照线
+		context.beginPath();
+		context.lineWidth=1;
+		context.strokeStyle="red";
+		context.moveTo(100,100);
+		context.lineTo(100,700);
+		context.moveTo(700,100);
+		context.lineTo(700,700);
+		context.stroke();
+
+		/*
+		lineCap在衔接处，是不起作用
+		可以替代closePath 优化封闭图形
+		*/
+	}
+	</script>
+</body>
+</html>

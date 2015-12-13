@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例23</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		canvas.width=800;
+		canvas.height=800;
+		
+		context.fillStyle="red";
+		context.storkeStyle="#058";
+		context.lineWidth=5;
+
+		/**
+		*
+		* a   c   e
+		* b   d   f
+		* 0   0   1
+		*
+		*/
+		/*
+		* a,d 水平、垂直缩放
+		* b,c 水平、垂直倾斜
+		* e,f 水平、垂直位移
+		*
+		*/
+		context.save();
+		//context.transform(1,0,0,1,0,0); //default
+		//context.transform(1,0,0,1,50,100);//位移
+		//context.transform(2,0,0,1.5,0,0);//缩放
+		//context.transform(1,0.2,0.2,1,0,0);//倾斜
+		context.setTransform(1,0.2,0.2,1,0,0);//倾斜
+		context.fillRect(50,50,300,300);
+		context.strokeRect(50,50,300,300);
+		context.restore();
+
+		/*tansform 的效果是累加的 如果不需要累加，就用setTransform*/
+
+	}
+	</script>
+</body>
+</html>

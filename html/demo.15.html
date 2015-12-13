@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例15</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		canvas.width=800;
+		canvas.height=800;
+		
+		context.lineWidth=10;
+		drawStar(context,150,300,400,400);
+	}
+	function drawStar(cxt,r,R,x,y){
+		cxt.beginPath();
+		for(var i=0;i<5;i++){
+			cxt.lineTo(Math.cos((18+i*72)/180*Math.PI)*R+x,-Math.sin((18+i*72)/180*Math.PI)*R+y);
+			cxt.lineTo(Math.cos((54+i*72)/180*Math.PI)*r+x,-Math.sin((54+i*72)/180*Math.PI)*r+y);
+		}
+		cxt.closePath();
+		cxt.stroke();
+	}
+	</script>
+</body>
+</html>

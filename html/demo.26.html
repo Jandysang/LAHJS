@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例26</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		window.onload=function(){
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			canvas.width=800;
+			canvas.height=800;
+			var bgi=new Image();
+			bgi.src="../img/pro_bg.png";
+			bgi.onload=function(){
+				var linearGrad=context.createPattern(bgi,"repeat");
+				context.fillStyle=linearGrad;
+				context.fillRect(0,0,canvas.width,canvas.height);
+			}
+			
+		}
+		/*
+			context.createPattern(bgi,"repeat");不仅仅用图片，也可以是用画布，和video（视频做背景图片）
+			strokeStyle和fillStyle一样的
+		*/
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例22</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		canvas.width=800;
+		canvas.height=800;
+		
+		context.lineWidth=5;
+		context.save();
+		context.scale(1,1);
+		context.strokeRect(50,50,200,200);
+		context.restore();
+		context.save();
+		context.scale(2,2);
+		context.strokeRect(50,50,200,200);
+		context.restore();
+		context.save();
+		context.scale(3,3);
+		context.strokeRect(50,50,200,200);
+		context.restore();
+		//所以放大的时候要放弃边框一系列的操作
+		//偏移的量，要从0,0开始，非要偏移用translate结合scale去做
+	}
+	</script>
+</body>
+</html>

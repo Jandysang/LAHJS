@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例19</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		canvas.width=800;
+		canvas.height=800;
+		
+		context.fillStyle="red";
+		context.translate(100,100);
+		context.fillRect(0,0,400,400);
+		
+	}
+	</script>
+</body>
+</html>

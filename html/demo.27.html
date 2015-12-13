@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例27</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		window.onload=function(){
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			canvas.width=800;
+			canvas.height=800;
+			
+			context.lineWidth=3;
+			context.strokeStyle="#058";
+			context.fillStyle="#058";
+			for(var i=0;i<10;i++){
+				context.beginPath();
+				context.arc(50+i*100,60,40,0,2*Math.PI*(i+1)/10);
+				//context.closePath();
+				context.stroke();
+			}
+			for(var i=0;i<10;i++){
+				context.beginPath();
+				context.arc(50+i*100,180,40,0,2*Math.PI*(i+1)/10);
+				context.closePath();
+				context.stroke();
+			}
+			for(var i=0;i<10;i++){
+				context.beginPath();
+				context.arc(50+i*100,300,40,0,2*Math.PI*(i+1)/10,true);
+				//context.closePath();
+				context.stroke();
+			}
+			for(var i=0;i<10;i++){
+				context.beginPath();
+				context.arc(50+i*100,420,40,0,2*Math.PI*(i+1)/10,true);
+				context.closePath();
+				context.stroke();
+			}
+			for(var i=0;i<10;i++){
+				context.beginPath();
+				context.arc(50+i*100,540,40,0,2*Math.PI*(i+1)/10);
+				context.closePath();
+				context.fill();
+			}
+			for(var i=0;i<10;i++){
+				context.beginPath();
+				context.arc(50+i*100,660,40,0,2*Math.PI*(i+1)/10,true);
+				context.closePath();
+				context.fill();
+			}
+			
+		}
+	</script>
+</body>
+</html>

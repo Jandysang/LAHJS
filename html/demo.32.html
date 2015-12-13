@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例32</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		window.onload=function(){
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			canvas.width=800;
+			canvas.height=800;
+
+			context.arc(400,400,300,0.5*Math.PI,1.5*Math.PI,true);
+			context.moveTo(400,100);
+			context.quadraticCurveTo(720,400,400,700);
+			context.stroke();
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例33</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		window.onload=function(){
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			canvas.width=1200;
+			canvas.height=1200;
+
+			
+			context.moveTo(0,600);
+			context.bezierCurveTo(540,400,660,800,1200,600);
+			context.stroke();
+		}
+		
+	</script>
+</body>
+</html>

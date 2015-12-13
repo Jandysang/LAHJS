@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<title>示例34</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		window.onload=function(){
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			canvas.width=1200;
+			canvas.height=1200;
+
+			
+			context.font="bold 40px Arial";
+			context.fillStyle="#058";
+			context.fillText("hello World!",40,100);
+			context.lineWidth=1;
+			context.strokeStyle="#058";
+			context.strokeText("hello World!",40,200);
+
+			context.fillText("hello World!",40,300,100);
+			context.strokeText("hello World!",40,400,100);
+
+			var linearGrad=context.createLinearGradient(0,0,800,0);
+			linearGrad.addColorStop(0.0,"orange");
+			linearGrad.addColorStop(0.25,"red");
+
+			linearGrad.addColorStop(0.5,"green");
+
+			linearGrad.addColorStop(0.75,"blue");
+			linearGrad.addColorStop(1.0,"pink");
+			context.fillStyle=linearGrad;
+			context.fillText("hello World!",40,500);
+		}
+		
+	</script>
+</body>
+</html>

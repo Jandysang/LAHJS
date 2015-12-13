@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>示例25</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		window.onload=function(){
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			canvas.width=800;
+			canvas.height=800;
+			
+			var linearGrad=context.createLinearGradient(0,0,800,800);
+			linearGrad.addColorStop(0.0,"#fff");
+			/*linearGrad.addColorStop(0.25,"red");
+
+			linearGrad.addColorStop(0.5,"green");
+
+			linearGrad.addColorStop(0.75,"blue");*/
+			linearGrad.addColorStop(1.0,"#000");
+			context.fillStyle=linearGrad;
+			context.fillRect(0,0,canvas.width,canvas.height);
+		}
+	</script>
+</body>
+</html>
