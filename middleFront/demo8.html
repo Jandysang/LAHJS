@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM2级事件处理程序</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input type="button" value="我是DOM2级事件处理程序按钮" id="btn1">
+	</div>
+	<script type="text/javascript">
+		window.onload=function(){
+			var btn=document.getElementById('btn1');
+			if(btn.addEventListener){
+				btn.addEventListener("click",function(){
+					alert("hello world!");		
+				},false)
+				/*btn.removeEventListener("click",function(){alert("hello world!");		
+				},false);*/
+			}else if(btn.attachEvent){
+				btn.attachEvent("onclick",function(){
+					alert("hello world!");
+				})
+				/*btn.detachEvent("click",function(){alert("hello world!");		
+				});*/
+			}else{
+				btn.onclick=function(){
+					alert("hello world!");
+				}
+				//btn.onclick=null;
+			}
+		};
+
+	</script>
+</body>
+</html>

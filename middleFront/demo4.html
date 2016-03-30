@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>relative相对自身定位的特性</title>
+	<style type="text/css">
+	.container{
+		width: 1000px;
+		margin: 0 auto;
+		
+	}
+	#demo1{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.container{
+		overflow: hidden;
+	}
+    /* .container{
+    	position: relative;
+    } */
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="demo1">我是绝对定位</div>
+	</div>
+</body>
+</html>

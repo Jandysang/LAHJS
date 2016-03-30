@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM事件独享</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input type="button" value="我是DOM2级事件处理程序按钮" id="btn1">
+	</div>
+	<script type="text/javascript">
+		var until={
+			addHandler:function(elem,type,handler){
+				if(elem.addEventListener){
+					elem.addEventListener(type,handler,false)
+				}else if(elem.attachEvent){
+					elem.attachEvent("on"+type,handler)
+				}else{
+					elem["on"+type]=handler;
+				}
+			},
+			removeHandler:function(elem,type,handler){
+				if(elem.removeEventListener){
+					elem.removeEventListener(type,handler,false)
+				}else if(elem.detachEvent){
+					elem.detachEvent("on"+type,handler)
+				}else{
+					elem["on"+type]=null;
+				}
+			},
+			getEvent:function(e){
+				return  e?e:window.event;
+			}
+		}
+
+		window.onload=function(){
+			var btn=document.getElementById('btn1');
+			until.addHandler(btn,"click",function(e){
+				e=until.getEvent(e);
+				alert(e.type);
+			})
+		}
+		
+	</script>
+</body>
+</html>

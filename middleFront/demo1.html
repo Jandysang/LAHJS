@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>relative相对自身定位的特性</title>
+	<style type="text/css">
+	.container{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	#demo1,#demo2{
+		height: 100px;
+		width: 100px;
+		background-color: #f60;
+		color: #333;
+		font-size: 16px;
+	}
+	#demo2{
+		background-color: green;
+	}
+	 #demo1{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#demo2{
+		position: relative;
+		top: 0;
+		left: 0;
+	} 
+	/* #demo1{
+		position: absolute;
+		top: 200px;
+		left: 200px;
+	}
+	#demo2{
+		position: relative;
+		top: 200px;
+		left: 200px;
+	} */
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="demo1">我是绝对定位</div>
+		<div id="demo2">我是相对定位</div>
+	</div>
+</body>
+</html>

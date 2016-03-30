@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>z-index特性</title>
+	<style type="text/css">
+	.container{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.box1,.box2{
+		position: relative;
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+	}
+	.box1{
+		z-index: 3;
+	}
+	.box2{
+		left: -50px;
+		top: -50px;
+		background-color: green;
+		z-index: 2;
+	}
+	.cc1,.cc2{
+		position: absolute;
+		width: 80px;
+		height: 80px;
+		top: 10px;
+		left: 10px;
+		background-color: red;
+	}
+	.cc1{
+		z-index: 9;
+	}
+	.cc2{
+		background-color: yellow;
+		z-index: 999999;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box1">
+			<div class="cc1">
+				
+			</div>
+		</div>
+		<div class="box2">
+			<div class="cc2">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

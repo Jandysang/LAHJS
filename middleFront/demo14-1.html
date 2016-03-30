@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iframe:父子关系---子访问父--子页面</title>
+</head>
+<body>
+	<input type="button" value="改变" id="btn1">
+	<script type="text/javascript">
+		window.onload=function() {
+			var btn=document.getElementById('btn1');
+			 btn.onclick=function(){
+			 	window.parent.document.getElementById("div1").style.backgroundColor='red';
+			 	
+			 }
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML事件处理程序</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input type="button" value="我是HTML事件处理程序按钮1" id="btn1" onclick="alert('hello world!');" >
+		<input type="button" value="我是HTML事件处理程序按钮2" id="btn2" onclick="sayHello();" >
+	</div>
+	<script type="text/javascript">
+		function sayHello() {
+			alert("hello world!");
+		}
+	</script>
+</body>
+</html>

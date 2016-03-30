@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM0级事件处理程序</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input type="button" value="我是DOM0级事件处理程序按钮" id="btn1">
+	</div>
+	<script type="text/javascript">
+		window.onload=function(){
+			var btn=document.getElementById('btn1');
+			btn.onclick=function(){
+				alert("hello world!");
+			}
+			//btn.onclick=null;
+		};
+
+	</script>
+</body>
+</html>

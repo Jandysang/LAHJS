@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>relative无侵入的特性</title>
+	<style type="text/css">
+	.container{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.box{
+		width: 1000px;
+		overflow: hidden;
+	}
+	.box li{
+		list-style: none;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.cb1,.cb3,.cb5{
+		float: left;
+		width: 400px;
+		height: 100px;
+		margin-bottom: 20px;
+	}
+	.cb1{
+		background-color: green;
+	}
+	.cb3{
+		background-color: blue;
+	}
+	.cb5{
+		background-color: #f0f0f0;
+	}
+	.cb2,.cb4,.cb6{
+		float: right;
+		width: 400px;
+		height: 100px;
+		margin-bottom: 20px;
+	}
+	.cb2{
+		background-color: red;
+	}
+	.cb4{
+		background-color: yellow;
+	}
+	.cb6{
+		background-color: #f60;
+	}
+
+	.cb3{
+		position: relative;
+		margin-top: -80px;
+	}
+	.cb4{
+		position: relative;
+		top: -80px;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="box">
+			<li class="cb1">cb1</li>
+			<li class="cb2">cb2</li>
+			<li class="cb3">cb3</li>
+			<li class="cb4">cb4</li>
+			<li class="cb5">cb5</li>
+			<li class="cb6">cb6</li>
+		</ul>
+	</div>
+</body>
+</html>

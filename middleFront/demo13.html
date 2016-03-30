@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iframe:父子关系---父访问子</title>
+</head>
+<body>
+	<input type="button" value="改变" id="btn1">
+	<iframe src="demo13-1.html" frameborder="0" id="iframe1"></iframe>
+	<script type="text/javascript">
+		window.onload=function() {
+			var btn=document.getElementById('btn1');
+			var ifm=document.getElementById("iframe1");
+			 btn.onclick=function(){
+			 	// alert(ifm.contentWindow);
+			 	ifm.contentWindow.document.getElementById("div1").style.backgroundColor="red";
+			 }
+		}
+	</script>
+</body>
+</html>
