@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>reactJS+JSX</title>
+    <script type="text/javascript" src="js/react.js"></script>
+    <script type="text/javascript" src="js/react-dom.js"></script>
+    <script type="text/javascript" src="js/browser.js"></script>
+</head>
+
+<body>
+	<div id="container">
+    </div>
+     <script type="text/babel">
+        ;!function(window, document, undefined) { 
+        	var Hello = React.createClass({ 
+        		render: function() { 
+                    var styObj={opacity:1,fontSize:'44px',color:'red'};
+        			return <div style={styObj}>Hello {this.props.name}</div>; 
+        		} 
+        	}); 
+
+        	ReactDOM.render(
+        		<Hello name="World" />, 
+        		document.getElementById('container') 
+        	); 
+        }(window, document);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>reactJS+JSX</title>
+    <script type="text/javascript" src="js/react.js"></script>
+    <script type="text/javascript" src="js/react-dom.js"></script>
+    <script type="text/javascript" src="js/browser.js"></script>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+    <script type="text/babel">
+        ;!function(window, document, undefined) { 
+        	var Hello = React.createClass({ 
+        		render: function() { 
+        			return <div>Hello {this.props.name}</div>; 
+        			// return  <div>Hello {this.props.name} {this.props.sayword}</div>;
+        		} 
+        	}); 
+
+        	ReactDOM.render(
+        		//<Hello name="World" sayword="我们是同程旅游好员工" />, 
+        		<Hello name="World" />, 
+        		document.getElementById('container') 
+        	); 
+        }(window, document);
+    </script>
+</body>
+
+</html>

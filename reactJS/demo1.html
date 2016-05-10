@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>reactJS</title>
+    <script type="text/javascript" src="js/react.js"></script>
+    <script type="text/javascript" src="js/react-dom.js"></script>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+    <script type="text/javascript">
+   /* ;
+    ! function(window, document, undefined) {
+        var Hello = React.createClass({
+            displayName: 'Hello',
+            render: function() {
+                return React.createElement("div", null, "Hello ", this.props.name);
+            }
+        });
+
+        ReactDOM.render(
+            React.createElement(Hello, {
+                name: "World"
+            }),
+            document.getElementById('container')
+        );
+    }(window, document);*/
+
+     ;
+    ! function(window, document, undefined) {
+        var Hello = React.createClass({
+            displayName: 'Hello',
+            render: function() {
+                return React.createElement("div", null, "Hello ", this.props.name+" ",this.props.word);
+            }
+        });
+
+        ReactDOM.render(
+            React.createElement(Hello, {
+                name: "World",
+                word:"我们是同程更好员工"
+            }),
+            document.getElementById('container')
+        );
+    }(window, document);
+    </script>
+</body>
+
+</html>
